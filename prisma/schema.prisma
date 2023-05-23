@@ -12,6 +12,10 @@ model User {
   name      String    @db.VarChar(63)
   email     String    @db.VarChar(63)
   password  String    @db.VarChar(125)
+  cpf       String    @db.VarChar(14)
+  cellphone String    @db.VarChar(15) 
+  address   String    @db.VarChar(125)
+  cep       String    @db.VarChar(9)
   createdAt DateTime  @default(now()) @db.Timestamp(0)
   updatedAt DateTime  @default(now()) @db.Timestamp(0)
   birthAt   DateTime? @db.Date

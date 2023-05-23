@@ -1,4 +1,4 @@
-import { IsDateString, IsEmail, IsOptional, IsString, MinLength } from "class-validator";
+import { IsDateString, IsEmail, IsIdentityCard, IsOptional, IsPhoneNumber, IsString, MaxLength, MinLength, isIdentityCard } from "class-validator";
 
 export class CreateUserDTO {
 
@@ -16,6 +16,17 @@ export class CreateUserDTO {
     @IsDateString()
     birthAt: string; 
 
+    @IsString()
+    cpf: string;
+
+    @IsPhoneNumber()
+    cellphone: string; 
+
+    @IsString()
+    address: string;
+
+    @IsString()
+    cep: string;
 
 }
 
